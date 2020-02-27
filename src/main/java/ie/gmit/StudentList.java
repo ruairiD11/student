@@ -18,11 +18,9 @@ public class StudentList {
 
         for(Student s : studentList) {
             if(s.equals(student)) {
-                System.out.println("Student found");
                 result = student;
             }
-            else if(s.equals(null)){
-                System.out.println("Student not found");
+            else {
                 result = null;
             }
         }

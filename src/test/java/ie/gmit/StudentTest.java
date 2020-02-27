@@ -32,4 +32,16 @@ public class StudentTest {
     void testConstructorFailure() {
         assertThrows(NullPointerException.class, ()-> {myStudent = new Student("aa", ""); });
     }
+
+    @DisplayName("Testing setName method")
+    @Test
+    void testSetName() {
+        myStudent = new Student("a", "b");
+        myStudent.setName("ruairi");
+        myStudent.setEmail("hhh@gmail.com");
+        assertEquals("ruairi", myStudent.getName());
+        assertEquals("hhh@gmail.com", myStudent.getEmail());
+    }
+
+
 }
