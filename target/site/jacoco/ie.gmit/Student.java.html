@@ -5,32 +5,21 @@ public class Student {
     private String email;
 
 <span class="fc" id="L7">    public Student(String name, String email) {</span>
-<span class="fc bfc" id="L8" title="All 2 branches covered.">        if(name.equals(&quot;&quot;)) {</span>
-<span class="fc" id="L9">            throw new NullPointerException(&quot;Student's name was not provided&quot;);</span>
-        }
-<span class="fc bfc" id="L11" title="All 2 branches covered.">        else if(email.equals(&quot;&quot;)) {</span>
-<span class="fc" id="L12">            throw new NullPointerException(&quot;Student's email was not provided&quot;);</span>
+<span class="pc bpc" id="L8" title="1 of 4 branches missed.">        if(name.equals(&quot;&quot;) || email.equals(&quot;&quot;)) {</span>
+<span class="fc" id="L9">            throw new NullPointerException(&quot;Blank name or email entry&quot;);</span>
         }
         else {
-<span class="fc" id="L15">            this.name = name;</span>
-<span class="fc" id="L16">            this.email = email;</span>
+<span class="fc" id="L12">            this.name = name;</span>
+<span class="fc" id="L13">            this.email = email;</span>
         }
-<span class="fc" id="L18">    }</span>
+<span class="fc" id="L15">    }</span>
 
     public String getName() {
-<span class="fc" id="L21">        return name;</span>
+<span class="fc" id="L18">        return name;</span>
     }
-
-    public void setName(String name) {
-<span class="fc" id="L25">        this.name = name;</span>
-<span class="fc" id="L26">    }</span>
 
     public String getEmail() {
-<span class="fc" id="L29">        return email;</span>
+<span class="fc" id="L22">        return email;</span>
     }
-
-    public void setEmail(String email) {
-<span class="fc" id="L33">        this.email = email;</span>
-<span class="fc" id="L34">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

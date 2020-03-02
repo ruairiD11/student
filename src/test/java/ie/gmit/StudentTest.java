@@ -6,7 +6,9 @@ public class StudentTest {
     Student myStudent;
 
     @BeforeAll
-    static void startingTests() { System.out.println("Starting Tests"); }
+    static void startingTests() {
+        System.out.println("Starting Tests");
+    }
 
     @BeforeEach
     void printDisplayNames(TestInfo testInfo, TestReporter testReporter) {
@@ -14,8 +16,7 @@ public class StudentTest {
     }
 
     @AfterAll
-    static void testingComplete()
-    {
+    static void testingComplete() {
         System.out.println("Testing Complete");
     }
 
@@ -30,18 +31,8 @@ public class StudentTest {
     @DisplayName("Checking Constructor Initialisation Failure")
     @Test
     void testConstructorFailure() {
-        assertThrows(NullPointerException.class, ()-> {myStudent = new Student("aa", ""); });
+        assertThrows(NullPointerException.class, () -> {
+            myStudent = new Student("aa", "");
+        });
     }
-
-    @DisplayName("Testing setName method")
-    @Test
-    void testSetName() {
-        myStudent = new Student("a", "b");
-        myStudent.setName("ruairi");
-        myStudent.setEmail("hhh@gmail.com");
-        assertEquals("ruairi", myStudent.getName());
-        assertEquals("hhh@gmail.com", myStudent.getEmail());
-    }
-
-
 }

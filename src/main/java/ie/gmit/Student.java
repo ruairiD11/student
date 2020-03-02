@@ -5,11 +5,8 @@ public class Student {
     private String email;
 
     public Student(String name, String email) {
-        if(name.equals("")) {
-            throw new NullPointerException("Student's name was not provided");
-        }
-        else if(email.equals("")) {
-            throw new NullPointerException("Student's email was not provided");
+        if(name.equals("") || email.equals("")) {
+            throw new NullPointerException("Blank name or email entry");
         }
         else {
             this.name = name;
@@ -21,15 +18,7 @@ public class Student {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 }
